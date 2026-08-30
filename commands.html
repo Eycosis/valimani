@@ -1,0 +1,239 @@
+<!--
+  ==============================================================================
+        VALİMANI™ BİLİŞİM, SUNUCU KİRALAMA & KİRALIK FORUM PORTALI
+        PRODUCED BY: FLEET ADMIRAL EYCOSIS - VERSION 2.0.0 [ULTIMATE RELEASE]
+        INSPIRED BY: NITRADO & GODLIKE PREMIUM INFRASTRUCTURE
+  ==============================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sekme İkonu: Senin o kopardığın jilet gibi saf çapa resmi resmi olarak kilitlendi -->
+    <link rel="icon" type="image/png" href="https://hizliresim.com">
+    <title>VALimanı™ Bilişim - Premium Game Server Hosting & Kiralık Forum</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        body {
+            background-color: #07080c; /* Mat Nitrado Siyahı */
+            color: #FFFFFF;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        /* 1. BÖLÜM: NITRADO STYLE HEADER */
+        header {
+            width: 100%;
+            background-color: #0c0d12;
+            border-top: 4px solid #D4AF37; /* Şanlı Ejderha Sarısı */
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.6);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-area {
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-area span { color: #D4AF37; }
+        nav { display: flex; align-items: center; gap: 25px; }
+        nav a {
+            color: #BBBBBB;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        nav a:hover { color: #D4AF37; }
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .btn-new-server {
+            background-color: #D4AF37;
+            color: #000000;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.2);
+        }
+        .btn-new-server:hover {
+            background-color: #E64628; /* Ateş Kırmızısı */
+            color: #FFFFFF;
+            transform: scale(1.03);
+            box-shadow: 0px 0px 20px rgba(230, 70, 40, 0.5);
+        }
+        .lang-zone { color: #888888; font-size: 12px; font-weight: bold; }
+        .login-btn {
+            color: #D4AF37;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .login-btn:hover { color: #FFFFFF; }
+
+        /* HERO ZONE - ANA KARŞILAMA ALANI */
+        .hero {
+            background: linear-gradient(180deg, #0c0d12 0%, #07080c 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.05);
+        }
+        .site-logo-img {
+            width: 130px;
+            height: 130px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border: 2px solid #D4AF37;
+            box-shadow: 0px 0px 25px rgba(212, 175, 55, 0.3);
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin: 0 0 10px 0;
+            color: #D4AF37;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 16px;
+            color: #888888;
+            margin: 0 auto 35px auto;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .btn-download-launcher {
+            background-color: #E64628;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 16px 40px;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 6px;
+            letter-spacing: 1px;
+            display: inline-block;
+            box-shadow: 0px 5px 20px rgba(230, 70, 40, 0.3);
+        }
+        .btn-download-launcher:hover {
+            background-color: #D4AF37;
+            color: #000000;
+            transform: scale(1.03);
+            box-shadow: 0px 0px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        /* 2. BÖLÜM: PREMIUM DISCORD COMMUNITY BANNER */
+        .discord-banner {
+            max-width: 1200px;
+            margin: 60px auto;
+            background: radial-gradient(circle at right, #2c1654 0%, #07080c 70%);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 50px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 15px 35px rgba(0,0,0,0.5);
+        }
+        .discord-left { max-width: 600px; }
+        .discord-left h2 { font-size: 32px; margin: 0 0 15px 0; letter-spacing: 1px; color: #FFFFFF; }
+        .discord-left p { color: #A0A0A0; font-size: 14px; line-height: 1.6; margin: 0 0 30px 0; }
+        .btn-join-discord {
+            background-color: #5865F2;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0px 5px 15px rgba(88, 101, 242, 0.3);
+        }
+        .btn-join-discord:hover { background-color: #4752C4; transform: scale(1.03); }
+        .discord-right-logo {
+            width: 120px;
+            height: 120px;
+            background: #5865F2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 40px rgba(88, 101, 242, 0.5);
+            border: 4px solid #FFFFFF;
+        }
+
+        /* 3. BÖLÜM: FAQ ACCOUSTIC BANNER */
+        .faq-section { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .faq-section h2 { color: #D4AF37; font-size: 36px; font-weight: bold; text-align: center; margin-bottom: 40px; letter-spacing: 2px; }
+        .faq-grid { display: flex; gap: 20px; flex-wrap: wrap; }
+        .faq-col { flex: 1; min-width: 350px; display: flex; flex-direction: column; gap: 15px; }
+        .faq-box { background-color: #12131a; border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 6px; overflow: hidden; }
+        .faq-toggle { width: 100%; background: none; border: none; padding: 20px; text-align: left; color: #FFFFFF; font-size: 15px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-content { max-height: 0; padding: 0 20px; overflow: hidden; transition: max-height 0.3s ease-out; background-color: #0b0c10; }
+        .faq-content p { color: #A0A0A0; font-size: 13px; line-height: 1.6; margin: 15px 0; }
+
+        /* 4. BÖLÜM: GODLIKE STYLE FOOTER */
+        footer {
+            background-color: #090a0f;
+            padding: 60px 20px 30px 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            font-size: 14px;
+        }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+        .footer-left { max-width: 300px; }
+        .footer-left h2 { color: #FFFFFF; font-size: 24px; font-weight: bold; margin: 0 0 15px 0; letter-spacing: 2px; }
+        .footer-left h2 span { color: #D4AF37; }
+        .footer-left p { color: #666666; font-size: 12px; line-height: 1.6; margin-bottom: 20px; }
+        .footer-grid { display: flex; gap: 60px; flex-wrap: wrap; }
+        .footer-col h4 { color: #FFFFFF; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; margin: 0 0 20px 0; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a { color: #888888; text-decoration: none; font-size: 13px; }
+        .footer-col ul li a:hover { color: #D4AF37; }
+        .footer-bottom { max-width: 1200px; margin: 40px auto 0 auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; color: #444444; font-size: 11px; letter-spacing: 1px; }
+
+        /* 5. BÖLÜM: NITRADO STYLE COOKIE BANNER */
+        .cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            background-color: #111111;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.8);
+            z-index: 99999;
+        }
+        .cookie-banner h3 { color: #D4AF37; font-size: 20px; font-weight: bold; letter-spacing: 1px; margin: 0 0 15px 0; text-align: center; }
+        .cookie-banner p { color: #BBBBBB; font-size: 12px; line-height: 1.6; text-align: justify; margin-bottom: 25px; }
+        .cookie-buttons { display: flex; gap: 15px; justify-content: center; }
